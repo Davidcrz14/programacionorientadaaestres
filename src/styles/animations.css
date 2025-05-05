@@ -1,0 +1,59 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+/* Mejoras en los efectos de hover */
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Efecto de brillo para elementos interactivos */
+.interactive-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.3s;
+}
+
+.interactive-shine:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
+}

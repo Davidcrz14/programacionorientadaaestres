@@ -1,0 +1,268 @@
+/* Estilos base */
+:root {
+  --color-bg: #0a0a0a;
+  --color-card: #141414;
+  --color-card-hover: #1a1a1a;
+  --color-accent: #2563eb;
+  --color-text: #ffffff;
+  --color-text-secondary: #9ca3af;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Estilos para el fondo con patrón sutil */
+.bg-pattern {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+      45deg,
+      var(--color-secondary) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, var(--color-secondary) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-secondary) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-secondary) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Estilos para las tarjetas */
+.card {
+  background: var(--color-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: var(--transition);
+  border: 1px solid var(--color-accent);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la tabla de ranking */
+.ranking-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.ranking-row {
+  background: var(--color-secondary);
+  transition: var(--transition);
+}
+
+.ranking-row:hover {
+  background: var(--color-accent);
+}
+
+.ranking-cell {
+  padding: 1rem;
+}
+
+/* Animaciones y efectos */
+.hover-effect {
+  transition: var(--transition);
+}
+
+.hover-effect:hover {
+  transform: scale(1.02);
+}
+
+/* Estilos para los badges y etiquetas */
+.badge {
+  background: var(--color-accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+/* Grid creativo */
+.creative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Efectos de hover para links */
+.link-effect {
+  position: relative;
+  color: var(--color-text);
+}
+
+.link-effect::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-text);
+  transition: var(--transition);
+}
+
+.link-effect:hover::after {
+  width: 100%;
+}
+
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.featured-challenge {
+  grid-column: span 8;
+  background: var(--color-card);
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.featured-challenge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--color-accent) 0%, transparent 100%);
+  opacity: 0.05;
+}
+
+.challenge-card {
+  grid-column: span 4;
+  background: var(--color-card);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.challenge-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: var(--color-card-hover);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  background: var(--color-card);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.leaderboard {
+  background: var(--color-card);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.leaderboard-row:hover {
+  background: var(--color-card-hover);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.badge.featured {
+  background: var(--color-accent);
+  color: white;
+}
+
+.difficulty-hard {
+  color: #ef4444;
+}
+
+.difficulty-medium {
+  color: #f59e0b;
+}
+
+.difficulty-easy {
+  color: #10b981;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
