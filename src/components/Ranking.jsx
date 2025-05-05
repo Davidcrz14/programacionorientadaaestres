@@ -32,10 +32,10 @@ function Ranking({ rankingData }) {
                 <div className="px-6 py-4 border-b border-[#333] text-sm">
                     <div className="grid grid-cols-12 text-gray-400">
                         <div className="col-span-1">#</div>
-                        <div className="col-span-4">Developer</div>
-                        <div className="col-span-2 text-center">Challenges</div>
-                        <div className="col-span-2 text-center">Success Rate</div>
-                        <div className="col-span-3 text-right">Points</div>
+                        <div className="col-span-4">Dev</div>
+                        <div className="col-span-2 text-center">Desafíos</div>
+                        <div className="col-span-2 text-center">Calificación</div>
+                        <div className="col-span-3 text-right">Puntos</div>
                     </div>
                 </div>
 
